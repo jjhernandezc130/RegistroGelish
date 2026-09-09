@@ -1,0 +1,27 @@
+@font-face {
+    font-family: Gotham;
+    src: url(../fuentes/Gotham/WOFF/Gotham-Medium.woff) format('woff'),
+        url(../fuentes/Gotham/OTF/Gotham-Medium.otf) format('otf'),
+        url(../fuentes/Gotham/TTF/Gotham-Medium.ttf) format('ttf');
+}
+
+@font-face {
+    font-family: Gotham-Light;
+    src: url(../fuentes/Gotham/WOFF/Gotham-Light.woff) format('woff'),
+        url(../fuentes/Gotham/OTF/Gotham-Light.otf) format('otf'),
+        url(../fuentes/Gotham/TTF/Gotham-Light.ttf) format('ttf');
+}
+
+@font-face {
+    font-family: Gotham-Medium;
+    src: url(../fuentes/Gotham/WOFF/Gotham-Medium.woff) format('woff'),
+        url(../fuentes/Gotham/OTF/Gotham-Medium.otf) format('otf'),
+        url(../fuentes/Gotham/TTF/Gotham-Medium.ttf) format('ttf');
+}
+
+@font-face {
+    font-family: Gotham-Book;
+    src: url(../fuentes/Gotham/WOFF/Gotham-Book.woff) format('woff'),
+        url(../fuentes/Gotham/OTF/Gotham-Book.otf) format('otf'),
+        url(../fuentes/Gotham/TTF/Gotham-Book.ttf) format('ttf');
+}

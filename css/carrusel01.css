@@ -1,0 +1,390 @@
+.kl-br {
+    display: none;
+}
+
+.kl-carousel {
+    font-family: system-ui;
+    padding: 60px 0;
+    overflow-x: hidden
+}
+
+.kl-header {
+    margin-bottom: 32px
+}
+
+.kl-header-inner {
+    margin: 0 auto;
+    padding-top: 30px;
+    padding-right: 50px;
+    padding-left: 50px;
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+.kl-title {
+    font-family: Gotham;
+    font-weight: 500;
+    font-size: 32px;
+    letter-spacing: 2px;
+    margin: 0;
+    white-space: nowrap
+}
+
+.kl-divider {
+    width: 2px;
+    height: 100px;
+    background: #000;
+    opacity: .7;
+}
+
+.kl-logo {
+    height: 110px;
+    object-fit: contain
+}
+
+.kl-cta {
+    font-family: Gotham;
+    font-weight: 500;
+    margin-left: auto;
+    background: transparent;
+    color: #000;
+    text-decoration: none;
+    padding: 0;
+    border-radius: 0;
+    font-size: 28px;
+    line-height: 1.2;
+    text-align: left;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.kl-cta::after {
+    content: "↵";
+    font-size: 28px;
+}
+
+.kl-cta:hover {
+    text-decoration: underline;
+    color: #000;
+}
+
+
+.kl-contenedor-btn {
+    text-align: right;
+
+    margin: 0 50px;
+}
+
+
+
+.kl-header h2 {
+    font-size: 80px;
+    letter-spacing: 2px;
+    margin: 0
+}
+
+.kl-track-wrapper {
+    position: relative;
+    overflow: visible;
+    padding-bottom: 40px;
+    padding-left: 50px;
+}
+
+.kl-track {
+    display: flex;
+    gap: 24px;
+    transition: transform .4s ease
+}
+
+.kl-slide {
+    display: flex;
+    align-items: flex-start;
+    gap: 24px;
+    position: relative;
+    transition: transform .35s ease
+}
+
+.kl-card {
+    border-radius: 24px;
+    overflow: hidden;
+    /* box-shadow: 0 10px 30px rgba(0, 0, 0, .3); */
+    transition: transform .3s, box-shadow .3s, filter .3s;
+    z-index: 1;
+    aspect-ratio: 3/4;
+    transform-origin: top left
+}
+
+.kl-card img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* TEXTO BASE (NO VISIBLE POR DEFECTO) */
+.kl-text {
+    width: 320px;
+    max-width: 320px;
+    padding: 16px 20px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .25s ease;
+    position: absolute;
+    left: 100%;
+    margin-left: 32px;
+    top: 0;
+    z-index: 5;
+}
+
+.kl-text p {
+    font-family: Gotham-Light;
+    font-size: 28px;
+}
+
+/* FLECHAS */
+.kl-arrow {
+    position: absolute;
+    bottom: -48px;
+    width: 56px;
+    height: 40px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+.kl-arrow img {
+    width: 40px;
+    height: auto
+}
+
+.kl-prev {
+    left: 24px;
+    opacity: 0;
+    pointer-events: none
+}
+
+.kl-prev.visible {
+    opacity: 1;
+    pointer-events: auto
+}
+
+.kl-prev img {
+    transform: rotate(180deg)
+}
+
+.kl-next {
+    right: 24px
+}
+
+
+@media(max-width:767px) {
+    .kl-divider {
+        height: 30px;
+    }
+
+    .kl-contenedor-btn {
+        margin: 0 0px;
+    }
+
+    .kl-header-inner {
+        margin: 0 auto;
+        padding: 0 10px;
+        align-items: center;
+        gap: 16px;
+    }
+
+    .kl-br {
+        display: block;
+    }
+
+    .kl-logo {
+        height: 30px;
+    }
+
+    .kl-header h2 {
+        font-size: 16px;
+    }
+
+    .kl-cta {
+        font-size: 10px;
+        background: #000;
+        color: #fff;
+        padding: 12px 12px;
+        border-radius: 12px;
+        position: relative;
+        top: -45px;
+        right: 20px;
+    }
+
+
+    .kl-cta:hover {
+        text-decoration: none;
+        color: #fff;
+    }
+
+    .kl-cta {
+        font-size: 8px;
+        background: #000;
+        color: #fff;
+        padding: 8px 8px;
+        border-radius: 12px;
+        position: relative;
+        top: -35px;
+        right: 20px;
+    }
+
+    .kl-cta::after {
+        content: "↵";
+        font-size: 14px;
+    }
+
+    .kl-header-inner {
+        flex-wrap: wrap;
+        gap: 16px
+    }
+
+    .kl-text p {
+        font-family: Gotham-Light;
+        font-size: 12px;
+    }
+
+    .kl-track-wrapper {
+        padding-left: 1px;
+        padding-bottom: 0px;
+    }
+}
+
+/* ===== DESKTOP ===== */
+@media (min-width:1200px) {
+    .kl-card {
+        filter: brightness(1.15) contrast(.9) saturate(.85);
+        opacity: 50%;
+    }
+
+    .kl-slide {
+        min-width: 25%;
+        z-index: 1
+    }
+
+    .kl-slide:hover {
+        z-index: 10
+    }
+
+    .kl-slide:hover .kl-text {
+        opacity: 1;
+        pointer-events: auto
+    }
+
+    .kl-slide:hover .kl-card {
+        transform: scale(1.1);
+        filter: none;
+        opacity: 1 !important;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, .3);
+        transition: transform .3s, box-shadow .3s, filter .3s;
+    }
+
+    .kl-slide:hover~.kl-slide {
+        transform: translateX(332px)
+    }
+
+    .kl-text {
+        width: 320px;
+        max-width: 320px;
+        padding: 16px 20px;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity .25s ease;
+        position: absolute;
+        left: 100%;
+        margin-left: 0px;
+        top: 0;
+        z-index: 5;
+    }
+}
+
+/* ===== TABLET ===== */
+@media (min-width:768px) and (max-width:1199px) {
+    .kl-card {
+        filter: brightness(1.12) contrast(.9) saturate(.9)
+    }
+
+    .kl-slide {
+        min-width: 33.33%;
+        z-index: 1
+    }
+
+    .kl-slide:hover {
+        z-index: 10
+    }
+
+    .kl-slide:hover .kl-text {
+        opacity: 1;
+        pointer-events: auto
+    }
+
+    .kl-slide:hover .kl-card {
+        transform: scale(1.1);
+        filter: none;
+        opacity: 100%;
+    }
+
+    .kl-slide:hover~.kl-slide {
+        transform: translateX(300px)
+    }
+}
+
+/* ===== MOBILE (AISLADO, SIN HOVER) ===== */
+@media (max-width:767px) {
+    .kl-track {
+        gap: 16px;
+        padding-left: 6%
+    }
+
+    .kl-slide {
+        min-width: 88%;
+        display: flex;
+        align-items: flex-start;
+        gap: 12px;
+        transform: none !important;
+    }
+
+    .kl-card {
+        flex: 0 0 55%;
+        filter: none !important;
+        transform: none !important;
+    }
+
+    .kl-text {
+        position: static;
+        width: auto;
+        max-width: none;
+        padding: 0 12px;
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    .kl-slide.active .kl-text {
+        opacity: 1;
+        pointer-events: auto;
+        margin-left: 0px;
+    }
+
+    .kl-titulo-card {
+        font-size: 12px;
+    }
+
+    .kl-card {
+        aspect-ratio: 3 / 5;
+    }
+}
+
+@media (min-width:1250px) and (max-width:1480px) {
+    .kl-text {
+        margin-left: 25px;
+    }
+}

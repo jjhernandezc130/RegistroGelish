@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="img/favicon.png">
+    <title>Registra tu compra | Gelish México</title>
+
+    <link rel="stylesheet" href="./css/fuentes.css">
+    <link rel="stylesheet" href="./css/carrusel01.css">
+    <link rel="stylesheet" href="./css/formulario.css">
+</head>
+
+<body>
+
+    <nav class="form-navbar">
+        <a href="index.html">
+            <img class="logo" src="./img/gelish-logo.png" alt="Gelish México">
+        </a>
+    </nav>
+
+    <section class="form-banner">
+        <div class="form-banner-content">
+            <p class="form-banner-eyebrow">Promoción Gelish México</p>
+            <h1 class="form-banner-title">Registra tu compra <span>y gana</span></h1>
+            <p class="form-banner-text">Sube tu comprobante y participa por la selección de regalos Gelish.</p>
+        </div>
+    </section>
+
+    <main class="form-page">
+        <div class="form-intro">
+            <p>Comparte tus datos y tu comprobante de compra para participar en la selección de regalos Gelish.
+                Todos los campos marcados con <span class="required">*</span> son obligatorios.</p>
+        </div>
+
+        <div class="form-card">
+
+            <form id="registroForm" novalidate>
+
+                <fieldset>
+                    <legend>Datos personales</legend>
+
+                    <div class="field">
+                        <label for="nombre">Nombre completo <span class="required">*</span></label>
+                        <input type="text" id="nombre" name="nombre" required maxlength="100" autocomplete="name">
+                    </div>
+
+                    <div class="field">
+                        <label for="numeroCliente">No. Cliente <span class="required">*</span></label>
+                        <input type="text" id="numeroCliente" name="numeroCliente" required maxlength="30">
+                    </div>
+
+                    <div class="field-row">
+                        <div class="field">
+                            <label for="telefono">Teléfono <span class="required">*</span></label>
+                            <input type="tel" id="telefono" name="telefono" required autocomplete="tel"
+                                pattern="[0-9]{10}" maxlength="10" placeholder="10 dígitos">
+                        </div>
+                        <div class="field">
+                            <label for="email">Email <span class="required">*</span></label>
+                            <input type="email" id="email" name="email" required maxlength="150"
+                                autocomplete="email">
+                        </div>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Dirección de envío</legend>
+
+                    <div class="field">
+                        <label for="calle">Calle y número <span class="required">*</span></label>
+                        <input type="text" id="calle" name="calle" required maxlength="150"
+                            autocomplete="address-line1">
+                    </div>
+
+                    <div class="field-row">
+                        <div class="field">
+                            <label for="colonia">Colonia <span class="required">*</span></label>
+                            <input type="text" id="colonia" name="colonia" required maxlength="100">
+                        </div>
+                        <div class="field">
+                            <label for="ciudad">Ciudad <span class="required">*</span></label>
+                            <input type="text" id="ciudad" name="ciudad" required maxlength="100"
+                                autocomplete="address-level2">
+                        </div>
+                    </div>
+
+                    <div class="field-row">
+                        <div class="field">
+                            <label for="estado">Estado <span class="required">*</span></label>
+                            <select id="estado" name="estado" required autocomplete="address-level1">
+                                <option value="" disabled selected>Selecciona un estado</option>
+                                <option>Aguascalientes</option>
+                                <option>Baja California</option>
+                                <option>Baja California Sur</option>
+                                <option>Campeche</option>
+                                <option>Chiapas</option>
+                                <option>Chihuahua</option>
+                                <option>Ciudad de México</option>
+                                <option>Coahuila</option>
+                                <option>Colima</option>
+                                <option>Durango</option>
+                                <option>Estado de México</option>
+                                <option>Guanajuato</option>
+                                <option>Guerrero</option>
+                                <option>Hidalgo</option>
+                                <option>Jalisco</option>
+                                <option>Michoacán</option>
+                                <option>Morelos</option>
+                                <option>Nayarit</option>
+                                <option>Nuevo León</option>
+                                <option>Oaxaca</option>
+                                <option>Puebla</option>
+                                <option>Querétaro</option>
+                                <option>Quintana Roo</option>
+                                <option>San Luis Potosí</option>
+                                <option>Sinaloa</option>
+                                <option>Sonora</option>
+                                <option>Tabasco</option>
+                                <option>Tamaulipas</option>
+                                <option>Tlaxcala</option>
+                                <option>Veracruz</option>
+                                <option>Yucatán</option>
+                                <option>Zacatecas</option>
+                            </select>
+                        </div>
+                        <div class="field">
+                            <label for="cp">Código postal <span class="required">*</span></label>
+                            <input type="text" id="cp" name="cp" required inputmode="numeric" pattern="[0-9]{5}"
+                                maxlength="5" autocomplete="postal-code">
+                        </div>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Comprobante de compra</legend>
+
+                    <div class="field">
+                        <label for="archivo">Sube tu ticket o factura <span class="required">*</span></label>
+                        <label class="file-drop" id="fileDrop" for="archivo">
+                            <input type="file" id="archivo" name="archivo" required accept=".jpg,.jpeg,.png,.pdf">
+                            <span class="file-drop-label">Toca para elegir un archivo (JPG, PNG o PDF, máx.
+                                5MB)</span>
+                            <div class="file-drop-filename" id="fileDropName"></div>
+                        </label>
+                    </div>
+                </fieldset>
+
+                <div class="field-checkbox">
+                    <input type="checkbox" id="aceptaAviso" name="aceptaAviso" required>
+                    <label for="aceptaAviso">
+                        He leído y acepto el
+                        <button type="button" class="link-aviso" id="abrirAviso">Aviso de Privacidad</button>
+                        y autorizo el tratamiento de mis datos personales para fines de esta promoción. <span
+                            class="required">*</span>
+                    </label>
+                </div>
+
+                <div class="form-message" id="formMessage"></div>
+
+                <button type="submit" class="btn-submit" id="btnSubmit">Enviar registro</button>
+
+                <!--p class="recaptcha-disclaimer">
+                    Este sitio está protegido por reCAPTCHA y aplican la
+                    <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Política de
+                        Privacidad</a> y los
+                    <a href="https://policies.google.com/terms" target="_blank" rel="noopener">Términos de
+                        Servicio</a> de Google.
+                </p-->
+            </form>
+
+            <div class="form-success" id="formSuccess">
+                <div class="icon">✓</div>
+                <h2>¡Registro recibido!</h2>
+                <p>Gracias por compartir tus datos y tu comprobante de compra. Si resultas seleccionado(a), nos
+                    pondremos en contacto contigo a través del teléfono o email que registraste.</p>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- ===================== -->
+    <!--  modulo 4 Carrusel Gelish -->
+    <!-- ===================== -->
+    <section class="kl-carousel">
+        <div class="kl-header">
+            <div class="kl-header-inner">
+                <h2 class="kl-title">EXPERIENCIA</h2>
+                <div class="kl-divider"></div>
+                <img class="kl-logo" src="img/gelishLogo-exp.png" alt="Gelish">
+            </div>
+            <div class="kl-contenedor-btn">
+                <a href="img/Catalogo-Gelish.pdf" target="_blank" class="kl-cta">VER <br class="kl-br"> CATÁLOGO</a>
+            </div>
+        </div>
+
+        <div class="kl-track-wrapper">
+            <button class="kl-arrow kl-prev" aria-label="Anterior">
+                <img src="img/Vector.png" alt="Anterior">
+            </button>
+            <button class="kl-arrow kl-next" aria-label="Siguiente">
+                <img src="img/Vector.png" alt="Siguiente">
+            </button>
+
+            <div class="kl-track">
+                <article class="kl-slide active">
+                    <div class="kl-card">
+                        <img src="img/gelish-carusel-1.jpg" alt="Gel Soak Off Polish 15ml">
+                    </div>
+                    <div class="kl-text">
+                        <h3 class="kl-titulo-card">EL ORIGEN DEL GEL, ELEVADO AL LUJO</h3>
+                        <p>160 tonos premium y 4 colecciones exclusivas de temporada diseñadas para profesionales.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="kl-slide">
+                    <div class="kl-card">
+                        <img src="img/gelish-carusel-2.jpg" alt="VERSIÓN MINI, ESENCIA MÁXIMA">
+                    </div>
+                    <div class="kl-text">
+                        <h3 class="kl-titulo-card">VERSIÓN MINI, ESENCIA MÁXIMA</h3>
+                        <p>Ideal para pruebas de color, servicios rápidos y mayor rotación en salón.</p>
+                    </div>
+                </article>
+
+                <article class="kl-slide">
+                    <div class="kl-card">
+                        <img src="img/gelish-carusel-3.jpg" alt="BACK TO BASICS">
+                    </div>
+                    <div class="kl-text">
+                        <h3 class="kl-titulo-card">BACK TO BASICS</h3>
+                        <p>La preparación correcta cambia todo. Aquí empieza el brillo, la duración y la experiencia
+                            Gelish.</p>
+                    </div>
+                </article>
+
+                <article class="kl-slide">
+                    <div class="kl-card">
+                        <img src="img/gelish-carusel-4.jpg" alt="TECNOLOGÍA QUE PROTEGE">
+                    </div>
+                    <div class="kl-text">
+                        <h3 class="kl-titulo-card">TECNOLOGÍA QUE PROTEGE</h3>
+                        <p>Más Que Luz: Protección, Potencia y Perfección.</p>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <div class="footer-top">
+            <img class="footer-logo" src="./img/gelish-logo.png" alt="Gelish México">
+
+            <div class="footer-social">
+                <span class="footer-social-label">Síguenos</span>
+                <a href="#" class="footer-social-icon" aria-label="Instagram">
+                    <img src="./img/ico-instagram-negro.png" alt="">
+                </a>
+                <a href="#" class="footer-social-icon" aria-label="Facebook">
+                    <img src="./img/ico-face-negro.png" alt="">
+                </a>
+                <a href="#" class="footer-social-icon" aria-label="TikTok">
+                    <img src="./img/ico-tiktok-negro.png" alt="">
+                </a>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p class="footer-tagline">El arte de las uñas extraordinarias</p>
+            <p class="footer-hashtag">#GelishMéxico</p>
+        </div>
+    </footer>
+
+    <dialog id="avisoPrivacidad">
+        <div class="dialog-content">
+            <h2>Aviso de Privacidad</h2>
+            <p>Gelish México (en adelante "el Responsable") recaba tus datos personales (nombre, número de cliente,
+                teléfono, correo electrónico, dirección y comprobante de compra) con la única finalidad de
+                verificar tu participación en esta promoción, realizar la selección de ganadores y hacerte llegar
+                el regalo correspondiente.</p>
+            <p>Tus datos serán almacenados de forma confidencial y no serán compartidos con terceros ajenos a esta
+                promoción. Podrás ejercer tus derechos de acceso, rectificación, cancelación u oposición (derechos
+                ARCO) enviando tu solicitud a través de nuestros canales oficiales de contacto.</p>
+            <p>Al marcar la casilla de aceptación, confirmas que has leído este aviso y otorgas tu consentimiento
+                para el tratamiento de tus datos conforme a lo aquí descrito.</p>
+            <button type="button" class="dialog-close" id="cerrarAviso">Cerrar</button>
+        </div>
+    </dialog>
+
+    <script src="./js/jscarrusel.js"></script>
+    <script src="./js/formulario.js"></script>
+</body>
+
+</html>
