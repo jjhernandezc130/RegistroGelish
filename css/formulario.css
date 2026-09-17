@@ -60,8 +60,9 @@ a {
 .form-banner {
     position: relative;
     width: 100%;
-    min-height: clamp(240px, 34vw, 460px);
-    background-image: url('../img/banner-gelish.webp');
+    aspect-ratio: 1900 / 450;
+    min-height: 200px;
+    background-image: url('../img/banner-formulario.jpeg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -126,11 +127,6 @@ a {
 }
 
 @media (max-width: 900px) {
-    .form-banner {
-        min-height: clamp(240px, 46vw, 340px);
-        background-position: 30% center;
-    }
-
     .form-banner-content {
         max-width: 380px;
         margin-right: 5%;
@@ -140,8 +136,9 @@ a {
 
 @media (max-width: 600px) {
     .form-banner {
+        aspect-ratio: auto;
         min-height: 340px;
-        background-position: 22% center;
+        background-position: center center;
         align-items: flex-end;
     }
 
