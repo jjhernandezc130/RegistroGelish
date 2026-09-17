@@ -127,7 +127,6 @@
 
             const payload = {
                 nombre: form.nombre.value.trim(),
-                numeroCliente: form.numeroCliente.value.trim(),
                 telefono: form.telefono.value.trim(),
                 email: form.email.value.trim(),
                 calle: form.calle.value.trim(),
