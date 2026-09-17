@@ -153,6 +153,7 @@
             if (result.ok) {
                 form.hidden = true;
                 successBox.classList.add('visible');
+                successBox.scrollIntoView({ behavior: 'smooth', block: 'start' });
             } else {
                 showMessage(result.error || 'Ocurrió un error al enviar tu registro. Intenta de nuevo.');
             }
